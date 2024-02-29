@@ -17,6 +17,10 @@ const Navbar = () => {
     setisClick(!isClick);
   };
 
+  const closeNavbar = () => {
+    setisClick(false);
+  };
+
   return (
     <>
       <nav className="bg-black fixed top-0 w-[100%] z-40">
@@ -36,7 +40,11 @@ const Navbar = () => {
             </div>
             <div className="hidden xl:block">
               <div className="ml-4 items-center space-x-4">
-                <Link href="/" className="text-white p-4  hover:text-gray-600">
+                <Link
+                  href="/"
+                  onClick={closeNavbar}
+                  className="text-white p-4  hover:text-gray-600"
+                >
                   HOME
                 </Link>
                 <Link

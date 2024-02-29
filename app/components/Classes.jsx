@@ -35,25 +35,25 @@ const classesData = [
     id: 1,
     image: "/images/classesimages/image1.jpg",
     classname: "CROSSFIT - BEGINNERS CLASS",
-    link: "/",
+    link: "/beginners",
   },
   {
     id: 2,
     image: "/images/classesimages/image2.jpg",
     classname: "CROSSFIT - GYMNASTICS",
-    link: "/Gymnastics",
+    link: "/gymnastics",
   },
   {
     id: 3,
     image: "/images/classesimages/image3.jpg",
     classname: "CROSSFIT - OLYMPIC LIFTING",
-    link: "/",
+    link: "/olympic-lifting",
   },
   {
     id: 4,
     image: "/images/classesimages/image4.jpg",
     classname: "CROSSFIT - FEMALE ONLY",
-    link: "/",
+    link: "/female-only",
   },
 ];
 

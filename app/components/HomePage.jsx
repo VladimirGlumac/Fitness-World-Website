@@ -4,6 +4,7 @@ import React from "react";
 // import Lottie from "lottie-react";
 import animationData from "../../public/animation/scrolly.json";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const HomePage = () => {
   const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
@@ -22,9 +23,12 @@ const HomePage = () => {
           </span>
         </h1>
         <div className="flex items-center justify-center w-full sm:justify-start pl-4 lg:pl-10 xl:pl-0">
-          <button className="bg-yellow-400 w-80 h-20 text-xl sm:text-2xl  mt-10 hover:bg-[#1c1c1c] hover:text-white">
+          <Link
+            href="#classes"
+            className="bg-yellow-400 w-80 h-20 text-xl sm:text-2xl  mt-10 hover:bg-[#1c1c1c] hover:text-white flex items-center justify-center transtion duration-300 ease-in-out"
+          >
             BEGIN YOUR JOURNEY
-          </button>
+          </Link>
         </div>
       </div>
       <div className="absolute right-0 h-full w-full sm:w-[80%] md:w-[70%] xl:w-[60%]">

@@ -161,7 +161,7 @@ const Memberships = () => {
                     </div>
                   </div>
                   <Link
-                    href="/"
+                    href="/memberships"
                     className="bg-yellow-400 p-2 hover:bg-[#1c1c1c] transition duration-300 ease-in-out hover:text-white"
                   >
                     JOIN TODAY
