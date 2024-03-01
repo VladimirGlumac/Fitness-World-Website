@@ -36,33 +36,33 @@ const Navbar = () => {
             </div>
             <div className="hidden xl:block">
               <div className="ml-4 items-center space-x-4">
-                <Link href="/" className="text-white p-4  hover:text-gray-600">
+                <a href="/" className="text-white p-4  hover:text-gray-600">
                   HOME
-                </Link>
-                <Link
-                  href="#whoweare"
+                </a>
+                <a
+                  href="/#whoweare"
                   className="text-white p-4  hover:text-gray-600 "
                 >
                   WHO WE ARE
-                </Link>
-                <Link
-                  href="#meettheteam"
+                </a>
+                <a
+                  href="/#meettheteam"
                   className="text-white p-4 hover:text-gray-600"
                 >
                   MEET THE TEAM
-                </Link>
-                <Link
-                  href="#classes"
+                </a>
+                <a
+                  href="/#classes"
                   className="text-white p-4 hover:text-gray-600"
                 >
                   CLASSES
-                </Link>
-                <Link
-                  href="#memberships"
+                </a>
+                <a
+                  href="/#memberships"
                   className="text-white p-4 hover:text-gray-600"
                 >
                   MEMBERSHIPS
-                </Link>
+                </a>
                 <Link
                   href="/contact"
                   className="p-4 text-xl  bg-yellow-400 font-bold text-black hover:bg-[#1c1c1c] hover:text-white transition duration-400 ease-in-out "
@@ -84,44 +84,47 @@ const Navbar = () => {
         {isClick && (
           <div className="xl:hidden">
             <div className="flex flex-col px-2 pt-2 pb-3 spa-y-1 sm:px-3 items-center gap-5">
-              <Link
+              <a
                 href="/"
                 onClick={() => setisClick(false)}
                 className="text-white hover:text-gray-400"
               >
                 HOME
-              </Link>
-              <Link
-                href="#whoweare"
+              </a>
+              <a
+                href="/#whoweare"
                 onClick={() => setisClick(false)}
                 className="text-white hover:text-gray-400"
               >
                 WHO WE ARE
-              </Link>
-              <Link
-                href="#meettheteam"
+              </a>
+              <a
+                href="/#meettheteam"
                 onClick={() => setisClick(false)}
                 className="text-white hover:text-gray-400"
               >
                 MEET THE TEAM
-              </Link>
-              <Link
-                href="#classes"
+              </a>
+              <a
+                href="/#classes"
                 onClick={() => setisClick(false)}
                 className="text-white hover:text-gray-400"
               >
                 CLASSES
-              </Link>
-              <Link
-                href="#memberships"
+              </a>
+              <a
+                href="/#memberships"
                 onClick={() => setisClick(false)}
                 className="text-white hover:text-gray-400"
               >
                 MEMBERSHIPS
-              </Link>
-              <button className="p-4 text-xl  bg-yellow-400 font-bold text-black hover:bg-[#1c1c1c] hover:text-white transition duration-400 ease-in-out ">
+              </a>
+              <Link
+                href="/contact"
+                className="p-4 text-xl  bg-yellow-400 font-bold text-black hover:bg-[#1c1c1c] hover:text-white transition duration-400 ease-in-out "
+              >
                 Contact
-              </button>
+              </Link>
               <div className="flex flex-row gap-3">
                 <div className="text-white text-3xl cursor-pointer hover:text-yellow-400 hover:translate-y-[-2px] transition duration-300 ease-in-out">
                   <FaInstagram />
