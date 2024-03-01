@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/variants";
 
 const teamData = [
   {
@@ -54,19 +57,23 @@ const teamData = [
 
 const MeetTheTeam = () => {
   return (
-    <section
+    <motion.section
+      variants={fadeIn("up", 0.4)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.2 }}
       id="meettheteam"
       className="relative bg-center bg-no-repeat bg-cover w-full flex flex-col mb-20 pt-20"
       style={{ backgroundImage: "url('/images/image3.png')" }}
     >
-      <h1 className="text-white text-[50px] md:text-[90px] lg:text-[120px] italic font-bold absolute top-[5%] left-[5%] md:top-[10%] xl:top-[10%] ">
+      <h1 className="text-white text-[50px] sm:text-[80px] md:text-[120px] italic font-bold absolute top-40 md:top-40 left-[10%]">
         02
       </h1>
       <div className="w-full flex flex-col items-center justify-center p-2 pb-[100px]">
-        <h1 className="text-[#1c1c1c] absolute text-4xl sm:text-6xl lg:text-8xl font-bold">
+        <h1 className="text-[#1c1c1c] absolute text-3xl sm:text-6xl lg:text-8xl font-bold">
           MEET THE TEAM
         </h1>
-        <h1 className="text-white text-2xl sm:text-4xl font-bold z-10 pt-10 md:pt-16">
+        <h1 className="text-white text-xl sm:text-4xl font-bold z-10 pt-6 md:pt-16">
           MEET THE TEAM
         </h1>
       </div>
@@ -94,7 +101,7 @@ const MeetTheTeam = () => {
           );
         })}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

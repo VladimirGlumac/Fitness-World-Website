@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/variants";
 
 const AnimatedNumber = dynamic(
   () => {
@@ -59,15 +61,22 @@ const classesData = [
 
 const Classes = () => {
   return (
-    <section id="classes" className="w-full bg-black relative pt-20">
-      <h1 className="text-white text-[50px] md:text-[120px] italic font-bold absolute top-[5%] md:top-[5%] xl:top-[10%] right-[10%]">
+    <motion.section
+      variants={fadeIn("up", 0.4)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.2 }}
+      id="classes"
+      className="w-full bg-black relative pt-20"
+    >
+      <h1 className="text-white text-[50px] sm:text-[80px] md:text-[120px] italic font-bold absolute top-40 md:top-40 right-[10%]">
         03
       </h1>
       <div className="w-full flex flex-col items-center justify-center p-2 pb-[100px]">
         <h1 className="text-[#1c1c1c] absolute text-3xl sm:text-6xl lg:text-8xl font-bold">
           FEATURED CLASSES
         </h1>
-        <h1 className="text-white text-2xl sm:text-4xl font-bold z-10 pt-10 md:pt-16">
+        <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold z-10 pt-6 md:pt-16">
           FEATURED CLASSES
         </h1>
       </div>
@@ -131,7 +140,7 @@ const Classes = () => {
           );
         })}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

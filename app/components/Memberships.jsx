@@ -2,6 +2,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaRegCircleCheck } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/variants";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -13,11 +15,15 @@ import Link from "next/link";
 
 const Memberships = () => {
   return (
-    <section
+    <motion.section
+      variants={fadeIn("up", 0.4)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.2 }}
       id="memberships"
-      className="relative bg-black w-full flex flex-col mb-20 pt-20"
+      className="relative bg-black w-full flex flex-col mb-20 pt-20 items-center justify-center"
     >
-      <h1 className="text-white text-[50px] md:text-[90px] lg:text-[120px] italic font-bold absolute top-[5%] left-[5%] md:top-[10%] xl:top-[10%] ">
+      <h1 className="text-white text-[50px] sm:text-[80px] md:text-[120px] italic font-bold absolute top-40 md:top-40 left-[10%]">
         04
       </h1>
       <div className="w-full flex flex-col items-center justify-center p-2 pb-[100px]">
@@ -28,16 +34,9 @@ const Memberships = () => {
           MEMBERSHIPS
         </h1>
       </div>
-      <div className="flex flex-col justify-center items-center w-full">
-        <div className="w-screen">
+      <div className="flex flex-col justify-center items-center w-[80%]">
+        <div className="w-full">
           <Swiper
-            style={{
-              "--swiper-pagination-color": "#FFBA08",
-              "--swiper-pagination-bullet-inactive-color": "#999999",
-              "--swiper-pagination-bullet-inactive-opacity": "1",
-              "--swiper-pagination-bullet-size": "8px",
-              "--swiper-pagination-bullet-horizontal-gap": "6px",
-            }}
             slidesPerView={3}
             effect={"coverflow"}
             grabCursor={true}
@@ -45,13 +44,12 @@ const Memberships = () => {
             initialSlide={2}
             loop
             coverflowEffect={{
-              rotate: 0,
+              rotate: 10,
               stretch: 0,
-              depth: 100,
+              depth: 200,
               modifier: 2.5,
               slideShadows: true,
             }}
-            pagination={true}
             modules={[EffectCoverflow, Pagination]}
             className="mySwiper"
           >
@@ -73,18 +71,19 @@ const Memberships = () => {
                   <div className="flex flex-col gap-2">
                     <div className="flex flex-row items-center justify-start gap-1 text-sm sm:text-md">
                       <FaRegCircleCheck size={18} />
-                      12 Classes Per Month
-                    </div>
-                    <div className="flex flex-row items-center justify-start gap-1 text-md">
-                      <FaRegCircleCheck size={18} />3 Classes Per Day
+                      <p className="text-sm ml-1">12 Classes Per Month</p>
                     </div>
                     <div className="flex flex-row items-center justify-start gap-1 text-md">
                       <FaRegCircleCheck size={18} />
-                      No joining fees
+                      <p className="text-sm ml-1">3 Classes Per Day</p>
+                    </div>
+                    <div className="flex flex-row items-center justify-start gap-1 text-md">
+                      <FaRegCircleCheck size={18} />
+                      <p className="text-sm ml-1">No joining fees</p>
                     </div>
                   </div>
                   <Link
-                    href="/"
+                    href="/memberships"
                     className="bg-yellow-400 p-2 hover:bg-[#1c1c1c] transition duration-300 ease-in-out hover:text-white"
                   >
                     JOIN TODAY
@@ -124,7 +123,7 @@ const Memberships = () => {
                     </div>
                   </div>
                   <Link
-                    href="/"
+                    href="/memberships"
                     className="bg-yellow-400 p-2 hover:bg-[#1c1c1c] transition duration-300 ease-in-out hover:text-white"
                   >
                     JOIN TODAY
@@ -150,14 +149,15 @@ const Memberships = () => {
                   <div className="flex flex-col justify-start items-start  gap-2  p-2">
                     <div className="flex flex-row items-center justify-start gap-1 text-md">
                       <FaRegCircleCheck size={18} />
-                      20 Classes Per Month
-                    </div>
-                    <div className="flex flex-row items-center justify-start gap-1 text-md">
-                      <FaRegCircleCheck size={18} />5 Classes Per Day
+                      <p className="text-sm ml-1">20 Classes Per Month</p>
                     </div>
                     <div className="flex flex-row items-center justify-start gap-1 text-md">
                       <FaRegCircleCheck size={18} />
-                      No joining fees
+                      <p className="text-sm ml-1">5 Classes Per Day</p>
+                    </div>
+                    <div className="flex flex-row items-center justify-start gap-1 text-md">
+                      <FaRegCircleCheck size={18} />
+                      <p className="text-sm ml-1">No joining fees</p>
                     </div>
                   </div>
                   <Link
@@ -172,7 +172,7 @@ const Memberships = () => {
           </Swiper>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

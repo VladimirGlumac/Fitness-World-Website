@@ -1,13 +1,21 @@
 "use client";
 import React from "react";
 import ApplyForClassForm from "../components/ApplyForClassForm";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/variants";
 
 const page = () => {
   return (
     <div className="w-full h-auto bg-black ">
       <div className="w-full h-full mt-20">
         <div className="flex flex-row">
-          <div className="w-full p-5">
+          <motion.div
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.2 }}
+            className="w-full p-5"
+          >
             <h1 className="text-4xl text-white mb-10">CROSSFIT-GYMNASTICS</h1>
             <h3 className="text-white mb-3">
               Are you ready to elevate your CrossFit training? Join our CrossFit
@@ -43,7 +51,7 @@ const page = () => {
               unleash your full potential!
             </p>
             <ApplyForClassForm />
-          </div>
+          </motion.div>
           <div className="hidden w-full md:flex justify-center items-center">
             <video
               className="w-full"

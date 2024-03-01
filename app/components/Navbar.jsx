@@ -17,10 +17,6 @@ const Navbar = () => {
     setisClick(!isClick);
   };
 
-  const closeNavbar = () => {
-    setisClick(false);
-  };
-
   return (
     <>
       <nav className="bg-black fixed top-0 w-[100%] z-40">
@@ -40,11 +36,7 @@ const Navbar = () => {
             </div>
             <div className="hidden xl:block">
               <div className="ml-4 items-center space-x-4">
-                <Link
-                  href="/"
-                  onClick={closeNavbar}
-                  className="text-white p-4  hover:text-gray-600"
-                >
+                <Link href="/" className="text-white p-4  hover:text-gray-600">
                   HOME
                 </Link>
                 <Link
@@ -71,9 +63,12 @@ const Navbar = () => {
                 >
                   MEMBERSHIPS
                 </Link>
-                <button className="p-4 text-xl  bg-yellow-400 font-bold text-black hover:bg-[#1c1c1c] hover:text-white transition duration-400 ease-in-out ">
+                <Link
+                  href="/contact"
+                  className="p-4 text-xl  bg-yellow-400 font-bold text-black hover:bg-[#1c1c1c] hover:text-white transition duration-400 ease-in-out "
+                >
                   CONTACT
-                </button>
+                </Link>
               </div>
             </div>
             <div className="xl:hidden flex items-center">
@@ -89,23 +84,37 @@ const Navbar = () => {
         {isClick && (
           <div className="xl:hidden">
             <div className="flex flex-col px-2 pt-2 pb-3 spa-y-1 sm:px-3 items-center gap-5">
-              <Link href="/" className="text-white hover:text-gray-400">
+              <Link
+                href="/"
+                onClick={() => setisClick(false)}
+                className="text-white hover:text-gray-400"
+              >
                 HOME
               </Link>
-              <Link href="#whoweare" className="text-white hover:text-gray-400">
+              <Link
+                href="#whoweare"
+                onClick={() => setisClick(false)}
+                className="text-white hover:text-gray-400"
+              >
                 WHO WE ARE
               </Link>
               <Link
                 href="#meettheteam"
+                onClick={() => setisClick(false)}
                 className="text-white hover:text-gray-400"
               >
                 MEET THE TEAM
               </Link>
-              <Link href="#classes" className="text-white hover:text-gray-400">
+              <Link
+                href="#classes"
+                onClick={() => setisClick(false)}
+                className="text-white hover:text-gray-400"
+              >
                 CLASSES
               </Link>
               <Link
                 href="#memberships"
+                onClick={() => setisClick(false)}
                 className="text-white hover:text-gray-400"
               >
                 MEMBERSHIPS

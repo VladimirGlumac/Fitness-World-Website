@@ -11,12 +11,12 @@ function Footer() {
             </p>
           </li>
           <li>
-            <p className="p-2 hover:text-[#1c1c1c] hover:cursor-pointer">
+            <p className="p-2 hover:text-[#1c1c1c] hover:cursor-pointer text-sm sm:text-md">
               (+381) 11 5555 555
             </p>
           </li>
           <li>
-            <p className="p-2 hover:text-[#1c1c1c] hover:cursor-pointer">
+            <p className="p-2 hover:text-[#1c1c1c] hover:cursor-pointer text-sm sm:text-md">
               23 Terazije Belgrade, Serbia
             </p>
           </li>
@@ -25,22 +25,22 @@ function Footer() {
       <div className="w-full h-auto pb-2">
         <ul className="flex flex-col items-start justify-center">
           <li>
-            <p className="xl:p-1 hover:text-[#1c1c1c] hover:cursor-pointer">
+            <p className="xl:p-1 hover:text-[#1c1c1c] hover:cursor-pointer text-sm sm:text-md">
               Careers
             </p>
           </li>
           <li>
-            <p className="xl:p-1 hover:text-[#1c1c1c] hover:cursor-pointer">
+            <p className="xl:p-1 hover:text-[#1c1c1c] hover:cursor-pointer text-sm sm:text-md">
               Contact
             </p>
           </li>
           <li>
-            <p className="xl:p-1 hover:text-[#1c1c1c] hover:cursor-pointer">
+            <p className="xl:p-1 hover:text-[#1c1c1c] hover:cursor-pointer text-sm sm:text-md">
               Privacy Policy
             </p>
           </li>
           <li>
-            <p className="xl:p-1 hover:text-[#1c1c1c] hover:cursor-pointer">
+            <p className="xl:p-1 hover:text-[#1c1c1c] hover:cursor-pointer text-sm sm:text-md">
               Terms & Conditions
             </p>
           </li>
